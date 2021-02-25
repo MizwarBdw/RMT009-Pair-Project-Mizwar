@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <%- include('./partials/nav_bar.ejs', {user: user}) %>
+
+    <div style="text-align: center; margin-top: 5%">
+        <h1 >Welcome to Perpus App</h1>
+        <h3>Daftar Buku yang tersedia</h3>
+    </div>
+
+    <div style="margin-left: 20%;">
+        <table border="1" style="margin-top: 5%; width: 70%; text-align: center;">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Stock</th>
+            
+            </tr>
+    
+            <% data.forEach(ele => { %>
+                <tr>
+                    <td><%= ele.title %></td>
+                    <td><%= ele.author %></td>
+                    <td><%= ele.category %></td>
+                    <td style="text-align: center;"><%= ele.stock %></td>
+                </tr> 
+            <% }) %>
+        </table><br>
+    </div>
+</body>
+</html>

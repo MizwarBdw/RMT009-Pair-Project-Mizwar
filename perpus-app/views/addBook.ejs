@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Add-Book</title>
+</head>
+<body>
+    
+    <div style="margin-left: 15%; margin-top: 5%;">
+        <h2>Add Book</h2>
+        <form action="/books/add" method="POST">
+            Book Name : <br>
+            <input type="text" name="title" ><br><br>
+            Author : <br>
+            <input type="text" name="author" ><br><br>
+            Category : <br>
+            <input type="text" name="category" ><br><br>
+            Stock : <br>
+            <input type="number" name="stock" ><br><br>
+    
+            <button type="submit" class="btn btn-dark">Create</button>
+        </form>
+    </div>
+</body>
+</html>

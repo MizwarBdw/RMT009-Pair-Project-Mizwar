@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <%- include('./partials/nav_bar.ejs') %>
+
+    <div style="text-align: center; margin-top: 5%">
+        <h1><%= title %></h1>
+    </div>
+    
+    <div style="margin-left: 32%;">
+        <form method="POST" action="/users/add" style="width: 50%;">
+
+        <label>Username :</label> <br>
+        <input type="text" name="username" placeholder="Your Username" style="width: 100%;"> <br> <br>
+
+        <label>Password :</label> <br>
+        <input type="password" name="password" placeholder="Your Password" style="width: 100%;"> <br> <br>
+
+        <label>Email :</label> <br>
+        <input type="text" name="email" placeholder="Your Email" style="width: 100%;"> <br> <br>
+        
+            
+        <label>First Name :</label> <br>
+        <input type="text" name="first_name" placeholder="Your First Name" style="width: 100%;"> <br> <br>
+
+        <label>Last Name :</label> <br>
+        <input type="text" name="last_name" placeholder="Your Last Name" style="width: 100%;"> <br> <br>
+        
+        <label>Gender :</label> <br>
+        <input type="radio" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="radio" name="gender" value="Female">
+        <label for="female">Female</label><br> <br>
+
+        <label>Role :</label> <br>
+        <select name="role" style="width: 102%;"> <br>
+            <option disabled selected>-- Please Select --</option>
+            <option value="Member">Member</option>
+            <option value="Admin">Admin</option>
+        </select> <br> <br>
+
+
+        <button type="submit" style="background-color: royalblue; 
+            color: seashell; 
+            padding: 8px 20px; 
+            border-radius: 12px;">Save</button>
+
+        <a href="/">
+        <button type="button" style="background-color:crimson; 
+            color: seashell; 
+            padding: 8px 20px; 
+            border-radius: 12px;">Cancel</button>
+        </a>
+    </form>
+        
+    </div>
+</body>
+</html>

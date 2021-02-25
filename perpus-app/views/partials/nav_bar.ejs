@@ -1,0 +1,20 @@
+<div style="background-color: steelblue; font-size: 20px; width: 100%; padding: 1%;">
+    <nav>
+        <h1 style="color: mintcream; margin-right: 100px; margin-left: 40px; position: relative; display: inline-block;">Perpus App</h1>
+        <% if (!user) { %>
+            <a href="/users/add" style="text-decoration: none; color: mintcream; margin-left: 20px;">Register</a>
+            <a href="/login" style="text-decoration: none; color: mintcream; margin-left: 20px;">Login</a>
+        <% } else { %>
+            <a href="/logout" style="text-decoration: none; color: mintcream; margin-left: 20px;">Logout</a>
+           
+            <a href="/books/list" style="text-decoration: none; color: mintcream; margin-left: 30px;">List Books</a>
+            <a href="/users/list" style="text-decoration: none; color: mintcream; margin-left: 20px;">User</a>
+           
+        <% } %>
+        
+        <a href="/" style="text-decoration: none; margin-left: 20px; color: mintcream;">Home</a>
+       
+      
+       
+    </nav>
+</div>

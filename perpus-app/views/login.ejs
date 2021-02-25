@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <%- include('./partials/nav_bar.ejs') %>
+
+    <div style="text-align: center; margin-top: 5%">
+        <h1>Login</h1>
+    </div>
+    
+    <div style="margin-left: 41%;">
+        <form method="POST" action="/login" style="width: 50%;">
+
+            <label>Username :</label> <br>
+            <input type="text" name="username" placeholder="Your Username" style="width: 60%;"> <br> <br>
+
+            <label>Password :</label> <br>
+            <input type="password" name="password" placeholder="Your Password" style="width: 60%;"> <br> <br>
+
+            <button type="submit" style="background-color: royalblue; 
+                color: seashell; 
+                padding: 8px 20px; 
+                border-radius: 12px;">Login</button>
+
+            <a href="/">
+            <button type="button" style="background-color:crimson; 
+                color: seashell; 
+                padding: 8px 20px; 
+                border-radius: 12px;">Cancel</button>
+            </a>
+        </form>
+        
+    </div>
+</body>
+</html>
